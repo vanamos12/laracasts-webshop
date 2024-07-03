@@ -19,21 +19,21 @@ class ImageFactory extends Factory
         return [
             //
             'path' => fake()->unique()->randomElement([
-                'media/example1.png', 
-                'media/example2.png', 
-                'media/example3.png', 
-                'media/example4.png', 
-                'media/example5.png',
-                'media/example6.png', 
-                'media/example7.png', 
-                'media/example8.png', 
-                'media/example9.png', 
-                'media/example10.png',
-                'media/example11.png', 
-                'media/example12.png', 
-                'media/example13.png', 
-                'media/example14.png', 
-                'media/example15.png'
+                'media/example1.jpg', 
+                'media/example2.jpg', 
+                'media/example3.jpg', 
+                'media/example4.jpg', 
+                'media/example5.jpg',
+                'media/example6.jpg', 
+                'media/example7.jpg', 
+                'media/example8.jpg', 
+                'media/example9.jpg', 
+                'media/example10.jpg',
+                'media/example11.jpg', 
+                'media/example12.jpg', 
+                'media/example13.jpg', 
+                'media/example14.jpg', 
+                'media/example15.jpg'
             ]),
 
         ];

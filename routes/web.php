@@ -1,7 +1,11 @@
 <?php
 
+use App\Livewire\StoreFront;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', StoreFront::class)->name('home');
+
+/*
 Route::get('/', function () {
     return view('welcome');
 });
@@ -15,3 +19,4 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+*/
