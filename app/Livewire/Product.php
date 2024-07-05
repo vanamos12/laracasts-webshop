@@ -4,10 +4,13 @@ namespace App\Livewire;
 
 use App\Actions\Webshop\AddProductVariantToCart;
 use App\Models\Product as ModelsProduct;
+use Laravel\Jetstream\InteractsWithBanner;
 use Livewire\Component;
 
 class Product extends Component
 {
+    use InteractsWithBanner;
+
     public $productId;
     public $variant;
 
@@ -23,6 +26,7 @@ class Product extends Component
     public function addToCart(AddProductVariantToCart $cart){
         $this->validate();
         $cart->add(variantId: $this->variant);
+        $this->banner('Your product has been added to your cart!');
     }
 
     public function getProductProperty(){

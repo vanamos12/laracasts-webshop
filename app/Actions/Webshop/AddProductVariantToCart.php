@@ -19,7 +19,7 @@ class AddProductVariantToCart
             'product_variant_id' => $variantId,
             'quantity' => 1,
         ]);
-        
+
         /*
        if (auth()->guest()){
             $cart = Cart::firstOrCreate([
@@ -32,7 +32,7 @@ class AddProductVariantToCart
            $cart= auth()->user()->cart ? : auth()->user()->cart()->create();
        }
            */ 
-       dd($cart);
+       //dd($cart);
     }
 
     
