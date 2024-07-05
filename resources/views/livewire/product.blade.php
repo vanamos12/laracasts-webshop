@@ -30,7 +30,6 @@
                     <option value="{{ $variant->id }}">{{ $variant->size }} / {{ $variant->color }}</option>
                 @endforeach
             </select>
-            {{ $this->variant }}
             @error('variant')
               <div class="mt-2 text-red-600">{{ $message }}</div>  
             @enderror

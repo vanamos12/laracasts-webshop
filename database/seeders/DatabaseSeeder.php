@@ -29,5 +29,10 @@ class DatabaseSeeder extends Seeder
             //->hasImages(3)
             ->has(Image::factory(3)->sequence(fn(Sequence $sequence) => ['featured' => $sequence->index%3 == 0]))
             ->create();
+
+        User::factory()->create([
+            'email' => 'hermann@gmail.com',
+            'password' => '12345678'
+        ]);
     }
 }
