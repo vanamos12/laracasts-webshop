@@ -22,10 +22,12 @@ Thank you for your order, you can find all the details below.
     @if($order->amount_subtotal->isPositive())
     | | | | **SubTotal costs**|{{ $order->amount_subtotal }}|
     @endif
-    @if($order->amount_total->isPositive())
-    | | | | **SubTotal costs**|{{ $order->amount_total }}|
-    @endif
+    
+    | | | | **Total costs**|{{ $order->amount_total }}|
+    
 @endComponent
 
-
+@component('mail::button', ['url'=>route('view-order', $order->id), 'color'=>'success'])
+    View Order
+@endcomponent
 @endcomponent
