@@ -16,12 +16,14 @@ class AddProductVariantToCart
             false => auth()->user()->cart ? : auth()->user()->cart()->create()
         };
         */
-        ($cart ?: CartFactory::make())->items()->firstOrCreate([
+        $item = ($cart ?: CartFactory::make())->items()->firstOrCreate([
             'product_variant_id' => $variantId,
         ], [ 
             'quantity' => 0,
-        ])->increment('quantity', $quantity);
-
+        ]);
+        
+        $item->increment('quantity', $quantity);
+        $item->touch();
         /*
        if (auth()->guest()){
             $cart = Cart::firstOrCreate([

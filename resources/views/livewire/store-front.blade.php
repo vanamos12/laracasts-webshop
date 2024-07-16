@@ -1,3 +1,4 @@
+<div>
 <div class="grid grid-cols-4 gap-4 mt-12">
     @foreach($this->products as $product)
        <div class="bg-white rounded-lg shadow p-4 relative">
@@ -7,4 +8,8 @@
             <span class="text-gray-700 text-sm">{{ $product->price }}</span>
        </div>
     @endforeach
+</div>
+<div>
+    {{ $this->products->links()}}
+</div>
 </div>

@@ -15,7 +15,7 @@
                 <a href="{{route('view-order', $item->id)}}" class="underline font-medium"> #{{ $item->id }} </a>
                 </td>
                 <td>{{ $item->created_at->diffForHumans() }}</td>
-                <td>{{ $item->amount_total}}</td>
+                <td class="text-right">{{ $item->amount_total}}</td>
                 
                 
             </tr>
